@@ -14,7 +14,6 @@ export const Menu = () => {
         <>
             <h1>Este es el menu</h1>
             <p>Este es el menu de navegacion</p>
-            <button value={'/Menu'} onClick={ handleClick }>Ir a Menu Principal</button>
             <button value={'/RegistrarUsuario'} onClick={ handleClick }>Ir a Registrar Usuario</button>
             <button value={'/SeleccionBeca'} onClick={ handleClick }>Ir a Seleccion Beca</button>
         </>
