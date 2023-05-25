@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #B1A4C3;
+    --secundary_color: #F1F1F1;
+    --tertiary-color: #6D6875;
+    --nav-bg-color: var(--primary-color);
+    --nav-font-color: var(--secundary_color);
+    --student-title-color: #BABABA;
+    --student-data-color: var(--tertiary-color);
+    --line-table-color: #BABABA;
+    --table-title-font-color: var(--primary-color);
+    --table-content-font-color: var(--tertiary-color);
+    --table-content-hover-bg-color: #EAEAEA;
+}
+
+* {
+    font-family: 'Karla', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Back-ground UAQ Logo */
+
+body {
+    background-image: url(../assets/logouaqGrande.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100% 100%;
+    background-size: 38vh;
+    background-blend-mode: multiply;
+}
+
+/* NavBar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 110px;
+    background-color: var(--nav-bg-color);
+}
+
+nav a {
+    height: 40px;
+}
+
+nav a img {
+    width: auto;
+    height: 40px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.user-info {
+    text-align: right;
+    padding-right: 8px;
+    color: var(--nav-font-color);
+}
+
+.user-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.email {
+    font-size: 11px;
+}
+
+/* Main Content */
+
+main {
+    padding: 0 110px;
+}
+
+/* Student Info */
+
+.student-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    text-align: center;
+    column-gap: 20px;
+    min-width: 500px;
+    padding: 60px 0 50px;
+}
+
+.student-container p:nth-child(1) {
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: var(--student-data-color);
+    font-weight: bold;
+}
+
+.student-container p:nth-child(2) {
+    font-size: 15px;
+    color: var(--student-title-color);
+}
+
+.expedient-image {
+    display: flex;
+}
+
+.student-image {
+    width: 46px;
+    height: 46px;
+    margin-right: 50px;
+    border-radius: 50%;
+    background-color: var(--secundary_color);
+    padding: 10px;
+}
+
+.student-degree {
+    justify-self: end;
+}
+
+/* Table Scholarship */
+
+.table-container{
+    margin-bottom: 70px;
+    font-size: 18px;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 40% repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    min-width: 520px;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.grid-table span {
+    padding: 0 5px;
+}
+
+.table-header {
+    color: var(--table-title-font-color);
+    border-bottom: 1px solid var(--line-table-color);
+    background-color: #FFF;
+}
+
+.table-scholarship-descrip {
+    color: var(--table-content-font-color);
+    cursor: pointer;
+}
+
+.table-scholarship:nth-child(even) {
+    /* background-color: #BABABA1A; */
+    background-color: #f4f4f4;
+}
+
+.table-scholarship:nth-child(odd) {
+    background-color: #FFF;
+}
+
+.table-scholarship-descrip:hover {
+    background-color: var(--table-content-hover-bg-color);
+}
+
+/* Document */
+.table-scholarship-details {
+    padding: 18px 70px;
+    margin-bottom: 14px;
+    box-shadow: 8px 10px 15px rgba(186, 186, 186, 0.47);
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* File Options */
+
+.document {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    height: 24px;
+}
+
+.image-document{
+    display: flex;
+    align-items: center;
+}
+
+.image-document a:nth-child(1) img{
+    height: 26px;
+    margin-right: 4px;
+}
+
+.image-document a:nth-child(2) img{
+    height: 22px;
+    margin-right: 4px;
+}
+
+.documents p,
+.observations p {
+    color: var(--table-title-font-color);
+    margin-bottom: 12px;
+}
+
+.document span,
+.observations span {
+    color: var(--table-content-font-color);
+}

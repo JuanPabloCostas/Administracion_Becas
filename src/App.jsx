@@ -8,6 +8,7 @@ import {
 import { RegistarUsuario } from './RegistroDeUsuario/RegistrarUsuario'
 import { Menu } from './Menu'
 import { SeleccionBeca } from './SeleccionDeBeca/SeleccionBeca'
+import { VisualizacionBecasEstudiante } from './VisualizacionBecasEstudiante/VisualizacionBecasEstudiante'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
               <Route exact path="/Menu" element={<Menu/>}/>
               <Route exact path="/RegistrarUsuario" element={<RegistarUsuario/>}/>
               <Route exact path="/SeleccionBeca" element={<SeleccionBeca/>}/>
+              <Route exact path="/VisualizacionBecasEstudiante" element={<VisualizacionBecasEstudiante/>}/>
 
               <Route render={() => <h1>Not found!</h1>} />
             </Routes>
