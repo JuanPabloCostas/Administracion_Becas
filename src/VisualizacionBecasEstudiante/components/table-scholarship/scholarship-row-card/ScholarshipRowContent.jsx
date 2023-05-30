@@ -1,8 +1,8 @@
 import { Document } from "./scholarship-row-content/Document";
 
-export const ScholarshipRowContent = () => {
+export const ScholarshipRowContent = ({ style }) => {
   return (
-    <div className="table-scholarship-details">
+    <div className="table-scholarship-details" style={style}>
       <div className="documents">
         <p>Documentos</p>
         <Document file_name={"Identificación.pdf"} />

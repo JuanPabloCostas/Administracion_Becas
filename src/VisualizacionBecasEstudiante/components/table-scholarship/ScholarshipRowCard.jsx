@@ -3,7 +3,6 @@ import { ScholarshipRowContent } from "./scholarship-row-card/ScholarshipRowCont
 import { ScholarshipRowTable } from "./scholarship-row-card/ScholarshipRowTable";
 
 export const ScholarshipRowCard = ({ data }) => {
-
   const [isOpen, setIsOpen] = useState(false)
 
   const rowState = () => {
@@ -13,8 +12,14 @@ export const ScholarshipRowCard = ({ data }) => {
 
   return (
     <div className="table-scholarship">
-      <ScholarshipRowTable data={data} isOpen={rowState} />
-      {isOpen && (<ScholarshipRowContent />)}
+      <ScholarshipRowTable 
+        data={data} 
+        isOpen={rowState} 
+      />
+      {isOpen && (
+      <ScholarshipRowContent 
+        style={{animationDuration: "0.5s", animationName: "slide-down"}}
+      />)}
     </div>
   );
 };

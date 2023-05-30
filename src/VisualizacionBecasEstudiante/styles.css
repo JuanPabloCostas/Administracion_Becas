@@ -123,7 +123,7 @@ main {
 
 /* Table Scholarship */
 
-.table-container{
+.table-container {
     margin-bottom: 70px;
     font-size: 18px;
 }
@@ -172,6 +172,7 @@ main {
     margin-bottom: 14px;
     box-shadow: 8px 10px 15px rgba(186, 186, 186, 0.47);
     border-radius: 0px 0px 10px 10px;
+    height: auto;
 }
 
 /* File Options */
@@ -183,17 +184,17 @@ main {
     height: 24px;
 }
 
-.image-document{
+.image-document {
     display: flex;
     align-items: center;
 }
 
-.image-document a:nth-child(1) img{
+.image-document a:nth-child(1) img {
     height: 26px;
     margin-right: 4px;
 }
 
-.image-document a:nth-child(2) img{
+.image-document a:nth-child(2) img {
     height: 22px;
     margin-right: 4px;
 }
@@ -207,4 +208,20 @@ main {
 .document span,
 .observations span {
     color: var(--table-content-font-color);
+}
+
+@keyframes slide-down {
+    0% {
+        visibility: hidden;
+        height: 0;
+    }
+
+    80% {
+        height: 200px;
+    }
+
+    100% {
+        visibility: collapse;
+        height: fit-content;
+    }
 }
