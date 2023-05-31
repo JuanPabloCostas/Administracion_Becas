@@ -66,8 +66,12 @@ p{
 
 .almacen img{
     position: absolute;
-    right: 0;
-    bottom: 3px;
+    right: 6px;
+    bottom: 0px;
+}
+
+.almacen img:hover{
+    cursor: pointer;
 }
 
 
@@ -110,7 +114,7 @@ p{
     font-weight: 400;
     font-size: 1.25rem;
 
-
+    margin-bottom: 16px;
     color: #6D6875;
 }
 
@@ -220,6 +224,8 @@ p{
     position: absolute;
     width: 400px;
     height: 48px;
+
+    top: 192px;
 
     background: #B1A4C3;
     border-radius: 100px;

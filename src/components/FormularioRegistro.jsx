@@ -77,7 +77,7 @@ export const FormularioRegistro = ( {visiblidad} ) => {
             </div>
             <div className='down'>
                 <div className='botonContainer'>
-                    <input type="button" value="Registar" onClick={ visiblidad }/>
+                    <input type="button" value="Registrar" onClick={ visiblidad }/>
                 </div>
             </div>
         </form>
