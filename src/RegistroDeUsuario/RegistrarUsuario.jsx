@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logoUAQ from '../assets/logouaq.svg'
 import cerrar from '../assets/cruz.svg'
 import './RegistrarUsuarioCSS.css'
 import { useNavigate } from "react-router-dom"
+import { FormularioRegistro } from '../components/FormularioRegistro'
+import { RegistroExitoso } from '../components/RegistroExitoso'
 
 
 export const RegistarUsuario = () => {
 
     const navigate = useNavigate();
 
+    const [esVisible, setEsVisible] = useState(false)
+
+    const cambiarVisibilidad = () => {
+        setEsVisible(!esVisible)
+    }
+
     const handleClick = ({target}) => {
-        navigate(target.value);
+        // console.log(event)
+        navigate(target.title);
     }
     
     return (
@@ -18,56 +27,28 @@ export const RegistarUsuario = () => {
             <div className='container'>
                 <div className='upper'>
                     
-                    <img id='contenedorImagenUaq' src={ logoUAQ } alt="" />
+                    <img id='contenedorImagenUaq' src={ logoUAQ } alt="" title={'/Menu'} onClick={ handleClick }/>
                     
-                    <p id='titleForm'>Registrate</p>
+                    <p id='titleForm'>Registro</p>
 
-                    <img id='cerrarImagen' src={ cerrar } alt="" />
+                    <img id='cerrarImagen' src={ cerrar } alt="" title={'/Menu'} onClick={ handleClick } />
                 </div>
-                <form action="post">
-                <div className='center'>
-                    <div className='almacenamiento'>
-                        <div className='renglon'>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                        </div>
-                        <div className='renglon'>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                            <div className='almacen'>
-                                <p>Hola</p>
-                                <input type="text" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='down'>
-                    <div className='botonContainer'>
-                        <input type="button" value="Registar"/>
-                    </div>
-                </div>
-                </form>
+
+                <FormularioRegistro
+                visiblidad = { cambiarVisibilidad }
+                />
+
+                {esVisible && <RegistroExitoso
+                 visiblidad = { cambiarVisibilidad }
+                 />}
+
+                
+                
             </div>
             
             {/* <h1>Registrar Usuario</h1>
             <p>Esta es la ventana para registrar un usuario</p>
-            <button value={'/Menu'} onClick={ handleClick }>Ir a Menu Principal</button> */}
+            <button title={'/Menu'} onClick={ handleClick }>Ir a Menu Principal</button> */}
         </>
     )
 }

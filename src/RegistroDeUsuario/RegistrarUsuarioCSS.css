@@ -9,11 +9,18 @@ p{
     background: #FFFFFF;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
     border-radius: 24px;
+    margin: auto;
+    margin-top: 32px;
 }
 
 .upper {
     display: grid;
     grid-template-columns: 100px auto 100px;
+}
+
+
+.upper img:hover{
+    cursor: pointer;
 }
 
 #contenedorImagenUaq{
@@ -37,7 +44,7 @@ p{
 
     font-weight: 500;
 
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     height: min-content;
 
@@ -57,7 +64,15 @@ p{
     margin-bottom: 4px;
 }
 
-.almacen input{
+.almacen img{
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+}
+
+
+
+.almacen .inputText{
     margin-top: 4px;
     width: 100%;
     background: #F1F1F1;
@@ -70,10 +85,28 @@ p{
     font-size: 1.25rem;
     
 
+    color: #818080;
+
+    
+    border-color: rgba(0, 0, 0, 0.178);
+
+}
+
+.almacen .inputText::placeholder{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
     color: #BABABA;
+
+}
+
+.almacen .inputText:focus-visible{
+    outline: 0.2px solid #2b2b2b;
 }
 
 .almacen {
+    position: relative;;
     font-weight: 400;
     font-size: 1.25rem;
 
@@ -88,6 +121,7 @@ p{
 }
 
 .botonContainer input{
+    max-width: 80%;
     width: 30.5rem;
     height: 3rem;
 
@@ -102,4 +136,129 @@ p{
     text-align: center;
 
     color: #FFFFFF;
+    
+    transition: 200ms;
+
+    
+    border-color: rgba(0, 0, 0, 0.01);
+}
+
+.botonContainer input:focus-visible{
+    outline: 0.2px solid #2b2b2b;
+}
+
+.botonContainer input:hover{
+    background: #9e82c4;
+    cursor: pointer;
+    
+}
+
+.contraseñaIncorrecta{  
+    position: absolute;
+    top: 100%;
+    margin: 0;
+
+    font-size: 1rem;
+
+    color: #FF575F;
+}
+
+.registroExitoso{
+    position: absolute;
+    width: 480px;
+    height: 264px;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    margin: auto;
+    padding-bottom: 0px;
+
+    z-index: 2;
+}
+
+.registroExitoso .cerrar{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.registroExitoso .cerrar:hover{
+    cursor: pointer;
+}
+
+.registroExitoso .feliz{
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+.registroExitoso p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+
+    
+    text-align: center;
+
+    color: #6D6875;
+    margin-top: 132px;
+
+}
+
+.registroExitoso input{
+    position: absolute;
+    width: 400px;
+    height: 48px;
+
+    background: #B1A4C3;
+    border-radius: 100px;
+
+    right: 0;
+    left: 0;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    border-color: rgba(0, 0, 0, 0.01);
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.registroExitoso input:focus-visible{
+    outline: 0.2px solid #2b2b2b;
+}
+
+.registroExitoso input:hover{
+    cursor: pointer;
+}
+
+.ventanaNegra{
+    position:absolute;
+    top: 0px;
+    left: 0px; 
+    right: 0px;
+    z-index: 1;
+    bottom: 0;
+    
+    overflow:hidden;
+    background-color: #23232488;
 }
