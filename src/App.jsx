@@ -11,6 +11,10 @@ import { SeleccionBeca } from './SeleccionDeBeca/SeleccionBeca'
 import { VisualizacionBecasEstudiante } from './VisualizacionBecasEstudiante/VisualizacionBecasEstudiante'
 import { Recuperar } from './Recuperar/Recuperar'
 import { Ingresar } from './Ingresar/Ingresar'
+import DataFetch from './test/DataFetch'
+
+
+
 
 
 function App() {
@@ -30,6 +34,7 @@ function App() {
               <Route exact path="/VisualizacionBecasEstudiante" element={<VisualizacionBecasEstudiante/>}/>
               <Route exact path="/Recuperar" element={<Recuperar/>}/>
               <Route exact path="/Ingresar" element={<Ingresar/>}/>
+              <Route exact path="/DataFetch" element={<DataFetch/>}/>
 
               <Route render={() => <h1>Not found!</h1>} />
             </Routes>

@@ -19,6 +19,7 @@ export const Menu = () => {
             <button value={'/VisualizacionBecasEstudiante'} onClick={ handleClick }>Ver Beca Estudiante</button>
             <button value={'/Recuperar'} onClick={ handleClick }>Ir a recuperar</button>
             <button value={'/Ingresar'} onClick={ handleClick }>Ir a ingresar</button>
+            <button value={'/DataFetch'} onClick={ handleClick }>Ir a DataFetch</button>
         </>
     )
 }
